@@ -79,15 +79,20 @@ function ChartFrame({
   label,
   children,
   height = 290,
+  unit,
 }: {
   label: string;
   children: React.ReactNode;
   height?: number;
+  unit?: string;
 }) {
   return (
-    <div className="chart" role="img" aria-label={label} style={{ height }}>
-      {children}
-    </div>
+    <>
+      {unit ? <p className="axis-note">{unit}</p> : null}
+      <div className="chart" role="img" aria-label={label} style={{ height }}>
+        {children}
+      </div>
+    </>
   );
 }
 function EnergyTooltip({
@@ -523,6 +528,7 @@ function App() {
                   </div>
                   <ChartFrame
                     label="Actual and predicted next-hour energy in Wh by forecast origin"
+                    unit="Next-hour energy (Wh)"
                     height={310}
                   >
                     <ResponsiveContainer width="100%" height="100%">
@@ -537,15 +543,7 @@ function App() {
                           minTickGap={55}
                           tickFormatter={(v) => String(v).slice(11, 16)}
                         />
-                        <YAxis
-                          {...axis}
-                          width={50}
-                          label={{
-                            value: "Wh",
-                            position: "top",
-                            offset: 0,
-                          }}
-                        />
+                        <YAxis {...axis} width={50} />
                         <Tooltip content={<EnergyTooltip />} />
                         <Line
                           type="linear"
@@ -776,7 +774,10 @@ function App() {
                         ))}
                       </select>
                     </label>
-                    <ChartFrame label="Daily total appliance energy in kWh">
+                    <ChartFrame
+                      label="Daily total appliance energy in kWh"
+                      unit="Daily energy (kWh)"
+                    >
                       <ResponsiveContainer>
                         <AreaChart
                           data={data.eda.daily.filter(
@@ -787,10 +788,7 @@ function App() {
                         >
                           <CartesianGrid vertical={false} stroke="#e8edf1" />
                           <XAxis {...axis} dataKey="date" minTickGap={70} />
-                          <YAxis
-                            {...axis}
-                            label={{ value: "kWh", position: "insideTopLeft" }}
-                          />
+                          <YAxis {...axis} />
                           <Tooltip
                             formatter={(v) => [
                               n(Number(v), 2) + " kWh",

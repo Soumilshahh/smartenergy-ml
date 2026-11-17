@@ -1121,3 +1121,9 @@ p a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
+.axis-note {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 0 0 4px;
+  font-weight: 600;
+}
