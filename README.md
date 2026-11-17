@@ -84,12 +84,12 @@ The production base is `/smartenergy-ml/`. GitHub Actions checks Python artifact
 
 ## Limits and credits
 
-One household, limited seasons, unknown occupancy and sensor release timing limit external validity. The selected method did not beat persistence on test. See [limitations](docs/LIMITATIONS.md) and [AI disclosure](docs/AI_DISCLOSURE.md). The student must review and understand every choice; AI assistance does not replace individual understanding.
+One household, limited seasons, unknown occupancy and sensor release timing limit external validity. The selected method did not beat persistence on test. See [limitations](docs/LIMITATIONS.md)
 
 
 - Dataset: Candanedo, L. (2017), [Appliances Energy Prediction, UCI](https://doi.org/10.24432/C5VC8G), CC BY 4.0.
 - Original publication: Candanedo, L. M., Feldheim, V., & Deramaix, D. (2017). [Data driven prediction models of energy use of appliances in a low-energy house](https://doi.org/10.1016/j.enbuild.2017.01.083). Energy and Buildings 140, 81–97. This project constructs a new future-hour target; its scores are not directly comparable with contemporaneous regression in that paper.
 - Pedregosa et al. (2011), Scikit-learn: Machine Learning in Python, JMLR 12, 2825–2830; [documentation](https://scikit-learn.org/1.6/).
-
+- OpenAI CODEX used to help with the project.
 
 Code: MIT. Dataset and derived data: CC BY 4.0. Library, icon and font credits: [THIRD_PARTY.md](docs/THIRD_PARTY.md).
