@@ -92,4 +92,4 @@ One household, limited seasons, unknown occupancy and sensor release timing limi
 - Pedregosa et al. (2011), Scikit-learn: Machine Learning in Python, JMLR 12, 2825–2830; [documentation](https://scikit-learn.org/1.6/).
 - OpenAI CODEX used to help with the project.
 
-Code: MIT. Dataset and derived data: CC BY 4.0. Library, icon and font credits: [THIRD_PARTY.md](docs/THIRD_PARTY.md).
+Code: MIT. Dataset and derived data: CC BY 4.0. Library, icon and font credits.
